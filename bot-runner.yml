@@ -1,0 +1,45 @@
+name: Infinity War Bot Runner
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # هر ۶ ساعت یک‌بار
+  workflow_dispatch: {}       # امکان اجرای دستی از تب Actions
+
+concurrency:
+  group: infinity-war-bot
+  cancel-in-progress: false   # اگه اجرای قبلی هنوز در حال اجراست، اجرای جدید صف بشه نه قطعش کنه
+
+permissions:
+  contents: write   # برای اینکه ربات بتونه دیتابیس رو خودش کامیت/پوش کنه
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355   # ~5h55m — کمی بیشتر از ۵ ساعت و ۴۰ دقیقه‌ی خاموشی خودکار، برای اطمینان
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore session from secret
+        run: echo "${{ secrets.SOROUSH_SESSION }}" > session.txt
+
+      - name: Configure git identity for auto-commits
+        run: |
+          git config --global user.name "Infinity War Bot"
+          git config --global user.email "actions@users.noreply.github.com"
+
+      - name: Run bot
+        run: python Meti2222.py
+        env:
+          RUNTIME_LIMIT_SECONDS: 20400   # ۵ ساعت و ۴۰ دقیقه
