@@ -1,0 +1,7 @@
+# هیچ‌وقت اطلاعات لاگین اکانت وارد ریپو نشه
+session.txt
+*.session
+
+__pycache__/
+*.pyc
+.env
