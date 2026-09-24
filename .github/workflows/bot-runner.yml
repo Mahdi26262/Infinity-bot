@@ -40,6 +40,6 @@ jobs:
           git config --global user.email "actions@users.noreply.github.com"
 
       - name: Run bot
-        run: python Meti2222.py
+        run: python -u Meti2222.py
         env:
           RUNTIME_LIMIT_SECONDS: 20400   # ۵ ساعت و ۴۰ دقیقه
