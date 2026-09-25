@@ -53,7 +53,7 @@ async def _ensure_media_client():
     return media_client
 
 
-ADMIN_CODE = "ADMIN2626"
+ADMIN_CODE = "SORMETI"
 STARTING_MONEY = 20000
 
 # 🧪 تست موقت: وقتی True باشه، فقط کد کشور واگنر اجازه‌ی ورود داره
