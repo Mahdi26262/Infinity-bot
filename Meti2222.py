@@ -22,7 +22,7 @@ from splusthon.sessions import StringSession
 # =========================================================
 
 DB_NAME = "infinity_war.db"
-CHANNEL = "Warzone096"
+CHANNEL = "Soorwar"
 SESSION_FILE = "session.txt"
 
 try:
