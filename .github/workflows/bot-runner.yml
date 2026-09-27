@@ -43,4 +43,5 @@ jobs:
       - name: Run bot
         run: python -u Meti2222.py
         env:
-          RUNTIME_LIMIT_SECONDS: 20400   # ۵ ساعت و ۴۰ دقیقه   
+          RUNTIME_LIMIT_SECONDS: 20400   # ۵ ساعت و ۴۰ دقیقه
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
