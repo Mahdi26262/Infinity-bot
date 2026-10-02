@@ -45,3 +45,4 @@ jobs:
         env:
           RUNTIME_LIMIT_SECONDS: 20400   # ۵ ساعت و ۴۰ دقیقه
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
