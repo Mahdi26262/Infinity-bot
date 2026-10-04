@@ -22,7 +22,7 @@ from splusthon.sessions import StringSession
 # =========================================================
 
 DB_NAME = "infinity_war.db"
-CHANNEL = "Soorwar"
+CHANNEL = "GOLDEhttpssplusirSoorwar"
 
 # برای گزارش‌گیری خودکار AI (خبر جهانی هر ۱۰ بیانیه + تحلیل آمار هر ۳
 # ساعت). مقدارش از GitHub Secret به‌نام OPENAI_API_KEY خونده میشه.
